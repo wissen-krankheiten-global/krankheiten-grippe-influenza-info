@@ -1,0 +1,16 @@
+.counter{
+    margin-top: 10%;
+    margin-left: 10%;
+    position: absolute;
+}
+
+.Head{
+    background-color: rgb(44, 44, 44);
+    padding: 1%;
+}
+
+.Sidebar{
+    background-color: aqua;
+    margin-right: 90%;
+    padding-top: 30%;
+}
