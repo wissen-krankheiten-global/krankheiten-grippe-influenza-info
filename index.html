@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script src="https://kit.fontawesome.com/630e78173f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>MyWebsite</title>
+    
+</head>
+<body style="margin: 0%;">
+    <div id="Head" class="Head">
+        <i py-click="add()" class="fa-solid fa-bars fa-xl" style="color: white;"></i>
+    </div>
+    <div class="Sidebar">
+        test
+    </div>
+    <p id="test"></p>
+    <button py-click="randomise()">Random Number 1-10</button>
+    <py-script src="script.py"></py-script>
+    <p id="counter" class="counter">0</p>
+    <button py-click="add()">+</button>
+    <button py-click="remove()">-</button>
+    <button py-click="Element('counter').write('gsrdf')">-</button>
+    <py-script>
+        count=0
+        def update():
+            global count
+            Element("counter").write(count)
+        def add():
+            global count
+            count+=1
+            update()
+        def remove():
+            global count
+            count-=1
+            update()
+    </py-script>
+</body>
+</html>
